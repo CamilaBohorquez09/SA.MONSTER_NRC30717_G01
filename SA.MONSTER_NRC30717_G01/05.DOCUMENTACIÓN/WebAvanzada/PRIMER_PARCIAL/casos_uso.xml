@@ -1,0 +1,85 @@
+<mxfile>
+  <diagram name="Casos de Uso Mejorado">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- RECTÁNGULO DEL SISTEMA -->
+        <mxCell id="sistema" value="Sistema de Gestión de Proyectos Monster" style="rounded=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="150" y="40" width="600" height="450" as="geometry"/>
+        </mxCell>
+
+        <!-- ACTORES -->
+        <mxCell id="admin" value="Administrador" style="shape=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="20" y="100" width="50" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="rrhh" value="RRHH" style="shape=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="20" y="250" width="50" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="supervisor" value="Supervisor" style="shape=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="20" y="380" width="50" height="100" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="empleado" value="Empleado" style="shape=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="780" y="250" width="50" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- CASOS DE USO -->
+        <mxCell id="c1" value="Gestionar Departamentos" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="250" y="80" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c2" value="Gestionar Proyectos" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="250" y="150" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c3" value="Gestionar Empleados" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="250" y="220" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c4" value="Gestionar Familiares" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="250" y="290" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c5" value="Asignar Empleados a Proyectos" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="250" y="360" width="260" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c6" value="Registrar Horas" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="550" y="220" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c7" value="Validar Horas" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="550" y="300" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c8" value="Consultar Información" style="ellipse;" vertex="1" parent="1">
+          <mxGeometry x="550" y="380" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- RELACIONES -->
+        <mxCell id="r1" edge="1" source="admin" target="c1" parent="1"/>
+        <mxCell id="r2" edge="1" source="admin" target="c2" parent="1"/>
+        <mxCell id="r3" edge="1" source="admin" target="c5" parent="1"/>
+
+        <mxCell id="r4" edge="1" source="rrhh" target="c3" parent="1"/>
+        <mxCell id="r5" edge="1" source="rrhh" target="c4" parent="1"/>
+
+        <mxCell id="r6" edge="1" source="supervisor" target="c7" parent="1"/>
+
+        <mxCell id="r7" edge="1" source="empleado" target="c6" parent="1"/>
+        <mxCell id="r8" edge="1" source="empleado" target="c8" parent="1"/>
+
+        <!-- INCLUDE -->
+        <mxCell id="rel1" value="<<include>>" style="dashed=1;" edge="1" source="c5" target="c6" parent="1"/>
+
+        <!-- EXTEND -->
+        <mxCell id="rel2" value="<<extend>>" style="dashed=1;" edge="1" source="c7" target="c6" parent="1"/>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
